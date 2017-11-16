@@ -61,5 +61,5 @@ plot(tt,solx,'b.-');
 plot(tt,soly,'y.-');
 hold off;
 
-% the pattern of the graph is periodic in nature.
+% the pattern of the graph 
 
