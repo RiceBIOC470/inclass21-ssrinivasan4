@@ -1,5 +1,22 @@
 %In class 21
 
+%GB comments
+1 80 I could not get your script to work correctly until I changed a few things.  For reference:
+k = 2;
+d = 2;
+k2 = 3; 
+d2 = 3;
+ 
+rhs = @(t,x) [2-2*x(1); 3*x(1) - 3*x(2)];
+sol = ode23(rhs, [0 10], [0, 0]);
+plot(sol.x, sol.y(1, :), 'r.-'); hold on;
+plot(sol.x, sol.y(2, :), 'b.-');
+legend({'x', 'y'});
+
+2 80 Graphs should not be periodic. 
+overall 80
+
+
 % 1. Consider the system we discussed in class for a gene which is produced
 % and degraded: dx/dt = k - d*x. Now consider that this gene turns on a
 % second gene y, which also degrades so that its equation is 
